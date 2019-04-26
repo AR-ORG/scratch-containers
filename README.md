@@ -6,18 +6,12 @@
 
 ##  What is a rootfs 
 
-    A root file system contains everything needed to support a full Linux System. rootfs is a type of root file system. 
-    
-    rootfs is considered to be a minimal root filesystem which is an instance of ramfs. 
-    
-    Only certian libraries / binaries are loaded with a minimal rootfs. 
-    
-    It has directories for proc, sys, dev - however a rootfs is not mounted by default.
-    
-    To use rootfs - you will have to mount /dev /sys to your local /dev and /sys
-    
-    
-    A simple way of extracting rootfs from initramfs is as below - 
+>   A root file system contains everything needed to support a full Linux System. rootfs is a type of root file system. 
+rootfs is considered to be a minimal root filesystem which is an instance of ramfs. 
+Only certian libraries / binaries are loaded with a minimal rootfs. 
+It has directories for proc, sys, dev - however a rootfs is not mounted by default.
+To use rootfs - you will have to mount /dev /sys to your local /dev and /sys
+A simple way of extracting rootfs from initramfs is as below - 
     
 `   cd `mktemp -d` && gzip -dc /boot/initrd.img-`uname -r` | cpio -ivd`
 
