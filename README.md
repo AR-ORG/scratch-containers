@@ -13,7 +13,7 @@ It has directories for proc, sys, dev - however a rootfs is not mounted by defau
 To use rootfs - you will have to mount /dev /sys to your local /dev and /sys
 A simple way of extracting rootfs from initramfs is as below - 
     
-`   cd `mktemp -d` && gzip -dc /boot/initrd.img-`uname -r` | cpio -ivd`
+`   cd \`mktemp -d\` && gzip -dc /boot/initrd.img-\`uname -r\` | cpio -ivd`
 
 ##  Install debootstrap to create rootfs 
 
