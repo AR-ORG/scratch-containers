@@ -2,7 +2,7 @@
 
 ##  What is a minimal container? 
 
-    A minimal container contains the least amount of packages. A rootfs can be treated with the most basic container 
+>  A minimal container contains the least amount of packages. A rootfs can be treated with the most basic container 
 
 ##  What is a rootfs 
 
@@ -25,14 +25,14 @@ cd `mktemp -d` && gzip -dc /boot/initrd.img-`uname -r` | cpio -ivd
 
     mkdir rootfs_debian
     
-    debootstrap stable rootfs_debian http://deb.debian.org/debian/
+    `debootstrap stable rootfs_debian http://deb.debian.org/debian/ `
     
     
     2.  Ubuntu rootfs
     
     mkdir rootfs_ubuntu
     
-    debootstrap --arch=amd64 xenial rootfs_ubuntu http://archive.ubuntu.com/ubuntu/
+    `debootstrap --arch=amd64 xenial rootfs_ubuntu http://archive.ubuntu.com/ubuntu/ `
     
 ##  Change root using chroot 
 
